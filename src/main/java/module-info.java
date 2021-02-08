@@ -3,7 +3,6 @@
  */
 module stocks.batch {
     requires transitive stocks.core;
-    //  requires transitive stocks.redis;
     requires transitive stocks.mongo;
     requires transitive stocks.entities;
     requires transitive stocks.analysis;

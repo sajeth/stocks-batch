@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.IntStream;
 
 public abstract class ListItemReaderPartitioner implements Partitioner {
     protected abstract <T extends List<? extends Serializable>> T fetchItemList();
