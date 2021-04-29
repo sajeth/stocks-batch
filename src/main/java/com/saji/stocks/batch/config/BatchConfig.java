@@ -83,20 +83,10 @@ public class BatchConfig {
         final JobRepositoryFactoryBean repoFactory = new JobRepositoryFactoryBean();
         repoFactory.setDataSource(dataSource);
         repoFactory.setTransactionManager(transactionManager);
-
         repoFactory.setIsolationLevelForCreate("ISOLATION_DEFAULT");
-        // repoFactory.setIsolationLevelForCreate("ISOLATION_REPEATABLE_READ");
         repoFactory.afterPropertiesSet();
         return repoFactory.getObject();
 
-//		JobRepositoryFactoryBean factory = new JobRepositoryFactoryBean();
-//	    factory.setDataSource(dataSource);
-//	    factory.setTransactionManager(transactionManager);
-//	    factory.setValidateTransactionState(true);
-//	    factory.setIsolationLevelForCreate("ISOLATION_REPEATABLE_READ");
-//	    factory.setIncrementerFactory(customIncrementerFactory());
-//	    factory.afterPropertiesSet();
-//	    return factory.getObject();
     }
 
     @Bean

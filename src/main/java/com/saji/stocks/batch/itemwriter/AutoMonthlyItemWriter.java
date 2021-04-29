@@ -22,7 +22,7 @@ public class AutoMonthlyItemWriter implements ItemWriter<String> {
     @Override
     public void write(List<? extends String> items) throws Exception {
         items.forEach(symbols -> {
-            log.info("Processing monthly id " + symbols + ",size=" + items.size());
+            log.info("Processing monthly updates for " + symbols);
             try {
                 iStockData.updateMonthlyStock(symbols);
             } catch (Exception e) {

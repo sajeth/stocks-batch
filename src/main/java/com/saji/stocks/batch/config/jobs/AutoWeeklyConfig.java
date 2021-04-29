@@ -20,7 +20,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
 public class AutoWeeklyConfig {
 
-    @Value("${saji.batch.autoWeekly.concurrency.limit:5}")
+    @Value("${saji.batch.autoWeekly.concurrency.limit:18}")
     private int concurrencyLimit;
 
     @Bean

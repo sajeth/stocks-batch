@@ -22,7 +22,7 @@ public class AutoDailyItemWriter implements ItemWriter<String> {
     @Override
     public void write(List<? extends String> items) throws Exception {
         items.forEach(symbol -> {
-            log.info("Processing Daily id " + symbol + ",size=" + items.size() + ",symbols=" + symbol);
+            log.info("Processing Daily updates  for " + symbol);
             try {
                 iStockData.updateDailyStock(symbol);
 

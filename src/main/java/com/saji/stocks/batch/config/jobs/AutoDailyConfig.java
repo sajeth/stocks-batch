@@ -19,9 +19,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @SuppressWarnings("exports")
 @Configuration
 public class AutoDailyConfig {
-    private static final Integer SKIP_LIMIT = 20;
 
-    @Value("${saji.batch.autoDaily.concurrency.limit:5}")
+    @Value("${saji.batch.autoDaily.concurrency.limit:15}")
     private int concurrencyLimit;
 
 
@@ -49,6 +48,7 @@ public class AutoDailyConfig {
     @Bean
     public Job autoDailyJob(final JobBuilderFactory jobBuilders,
                             @Qualifier("autoDailyJobStep") final Step autoDailyJobStep) {
+
         return jobBuilders.get("autoDailyJob")
                 .incrementer(new RunIdIncrementer())
                 .start(autoDailyJobStep).build();

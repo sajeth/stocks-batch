@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.saji.stocks.batch</groupId>
     <artifactId>stocks-batch</artifactId>
-    <version>9.0.0</version>
+    <version>10.0.0</version>
     <packaging>jar</packaging>
     <name>stocks-batch</name>
     <parent>
@@ -18,11 +18,11 @@
         <java.version>15</java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.saji.stocks.analysis</groupId>
-            <artifactId>stocks-analysis</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.saji.stocks.analysis</groupId>-->
+        <!--            <artifactId>stocks-analysis</artifactId>-->
+        <!--            <version>3.0.0</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
@@ -31,21 +31,21 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.saji.stocks.core</groupId>
-            <artifactId>stocks-core</artifactId>
-            <version>6.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.saji.stocks.redis</groupId>
-                    <artifactId>stocks-redis</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.saji.stocks.analysis</groupId>
-                    <artifactId>stocks-analysis</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.saji.stocks.core</groupId>-->
+        <!--            <artifactId>stocks-core</artifactId>-->
+        <!--            <version>6.0.0</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>com.saji.stocks.redis</groupId>-->
+        <!--                    <artifactId>stocks-redis</artifactId>-->
+        <!--                </exclusion>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>com.saji.stocks.analysis</groupId>-->
+        <!--                    <artifactId>stocks-analysis</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -74,16 +74,16 @@
             <groupId>com.saji.stocks.mongo</groupId>
             <artifactId>stocks-mongo</artifactId>
             <version>7.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.saji.stocks.core</groupId>
-                    <artifactId>stocks-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.saji.stocks.analysis</groupId>
-                    <artifactId>stocks-analysis</artifactId>
-                </exclusion>
-            </exclusions>
+            <!--            <exclusions>-->
+            <!--                <exclusion>-->
+            <!--                    <groupId>com.saji.stocks.core</groupId>-->
+            <!--                    <artifactId>stocks-core</artifactId>-->
+            <!--                </exclusion>-->
+            <!--                <exclusion>-->
+            <!--                    <groupId>com.saji.stocks.analysis</groupId>-->
+            <!--                    <artifactId>stocks-analysis</artifactId>-->
+            <!--                </exclusion>-->
+            <!--            </exclusions>-->
         </dependency>
     </dependencies>
 

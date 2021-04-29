@@ -69,7 +69,7 @@ public class GenericJobBlockingLauncherDetails extends QuartzJobBean {
         final String jobName = (String) jobDataMap.get(JOB_NAME);
         final Date startTime = new Date();
         jobDataMap.put("startTime", startTime);
-        final List<DefaultParameter> defaultParameters = batchJobRepository.getBatchDefaultParameters(jobName);
+        final List<DefaultParameter> defaultParameters = this.batchJobRepository.getBatchDefaultParameters(jobName);
         defaultParameters.stream().filter(param -> !jobDataMap.containsKey(param.getKey()))
                 .forEach(param -> jobDataMap.put(param.getKey(), param.getValue()));
         final JobParameters jobParameters = getJobParametersFromJobMap(jobDataMap);

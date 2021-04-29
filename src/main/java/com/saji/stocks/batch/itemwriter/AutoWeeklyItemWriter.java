@@ -22,7 +22,7 @@ public class AutoWeeklyItemWriter implements ItemWriter<String> {
     @Override
     public void write(List<? extends String> items) throws Exception {
         items.forEach(symbols -> {
-            log.info("Processing weekly id " + symbols + ",size=" + items.size());
+            log.info("Processing weekly updates for " + symbols);
             try {
                 iStockData.updateWeeklyStock(symbols);
             } catch (Exception e) {

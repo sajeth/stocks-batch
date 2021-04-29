@@ -20,7 +20,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
 public class AutoMonthlyConfig {
 
-    @Value("${saji.batch.autoMonthlyStock.concurrency.limit:5}")
+    @Value("${saji.batch.autoMonthlyStock.concurrency.limit:20}")
     private int concurrencyLimit;
 
     @Bean

@@ -71,7 +71,6 @@ public class QuartzConfig {
         schedulerContextAsMap.put("jobLauncher", jobLauncher);
         scheduler.setSchedulerContextAsMap(schedulerContextAsMap);
         scheduler.setApplicationContextSchedulerContextKey("applicationContext");
-
         scheduler.setDataSource(dataSource);
         scheduler.setTransactionManager(transactionManager);
         scheduler.setQuartzProperties(quartzProperties());

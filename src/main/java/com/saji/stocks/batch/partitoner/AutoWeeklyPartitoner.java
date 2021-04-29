@@ -1,7 +1,7 @@
 package com.saji.stocks.batch.partitoner;
 
 import com.saji.stocks.batch.partitioner.ListItemReaderPartitioner;
-import com.saji.stocks.core.services.stock.IStock;
+import com.saji.stocks.mongo.services.IStockData;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,12 +15,12 @@ public class AutoWeeklyPartitoner extends ListItemReaderPartitioner {
     private static final String STEP_NAME = "autoWeekly-";
 
     @Autowired
-    IStock iStocks;
+    IStockData iStockData;
 
     @SuppressWarnings("unchecked")
     @Override
     protected List<String> fetchItemList() {
-        return iStocks.findWeeklyStocks();
+        return iStockData.getStocks();
     }
 
     @Override
